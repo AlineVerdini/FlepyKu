@@ -27,7 +27,6 @@ public class Player {
             if (posY + GOKU_HEIGHT <= 400 + PADDING) {
                 posY+=2;
                 goku.translate(0,2);
-                System.out.println("falling");
             }
             try {
                 Thread.sleep(10);

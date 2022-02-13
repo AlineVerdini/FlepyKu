@@ -3,18 +3,21 @@ public class Game {
     private Controls controls;
     private Player player;
     private boolean isStarted;
-    private Background picture;
+    private Background background;
+    private Piccolo piccolo;
 
     //constructor
 
     //Methods
 
     public void init(){
+        background = new Background();
         player = new Player();
         player.show();
+        piccolo = new Piccolo(background);
+        piccolo.show();
         controls = new Controls(player);
         controls.init();
-        picture = new Background("BackGround.png");
 
     }
 
@@ -23,6 +26,7 @@ public class Game {
         isStarted = true;
         while (isStarted == true) {
             player.falling();
+            piccolo.move();
         }
     }
 
