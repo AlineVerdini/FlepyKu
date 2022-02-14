@@ -5,6 +5,7 @@ public class Game {
     private boolean isStarted;
     private Background background;
     private Piccolo piccolo;
+    private PiccoloAttack piccoloAttack;
 
     //constructor
 
@@ -18,6 +19,8 @@ public class Game {
         piccolo.show();
         controls = new Controls(player);
         controls.init();
+        piccoloAttack = new PiccoloAttack(background);
+        piccoloAttack.show();
 
     }
 
@@ -27,6 +30,7 @@ public class Game {
         while (isStarted == true) {
             player.falling();
             piccolo.move();
+            piccoloAttack.moveLeft();
         }
     }
 
