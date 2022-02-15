@@ -9,6 +9,7 @@ public class Player {
         private Picture goku;
         private static int GOKU_HEIGHT = 63;
         private static int PADDING = 10;
+        private int life = 3;
 
         //x --> horizontal
         //y --> vertical
@@ -42,8 +43,15 @@ public class Player {
             goku.translate(0,-GOKU_HEIGHT);
         }
 
+        public void hit(){
+            life--;
+        }
+
         public int getPosY() {
             return posY;
         }
 
+        public int getPosX() {
+            return posX;
+         }
 }

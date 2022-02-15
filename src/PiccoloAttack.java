@@ -25,6 +25,10 @@ public class PiccoloAttack {
         piccoloAttack.draw();
     }
 
+    public void delete(){
+        piccoloAttack.delete();
+    }
+
 
     public void moveDown(){
         posY+=2;
@@ -51,6 +55,10 @@ public class PiccoloAttack {
 
     public int getPosX() {
         return posX;
+    }
+
+    public int getPosY() {
+        return posY;
     }
 }
 

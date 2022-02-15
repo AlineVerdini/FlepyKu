@@ -10,6 +10,9 @@ public class Piccolo {
     private Background background;
     private int direction;
 
+
+    private int life = 3;
+
         //x --> horizontal
         //y --> vertical
 
@@ -68,5 +71,10 @@ public class Piccolo {
     public int getPosY() {
             return posY;
         }
+
+    public int getLife() {
+        return life;
+    }
+
 }
 

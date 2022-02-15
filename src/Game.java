@@ -6,6 +6,7 @@ public class Game {
     private Background background;
     private Piccolo piccolo;
     private PiccoloAttack piccoloAttack;
+    private BarraStats barraStats;
 
     //constructor
 
@@ -21,7 +22,7 @@ public class Game {
         controls.init();
         piccoloAttack = new PiccoloAttack(background);
         piccoloAttack.show();
-
+        barraStats = new BarraStats(player,background);
     }
 
     public void start(){
@@ -31,6 +32,17 @@ public class Game {
             player.falling();
             piccolo.move();
             piccoloAttack.moveLeft();
+            damage();
+        }
+    }
+
+    public void damage(){
+        if(player.getPosX() + 155 >= piccoloAttack.getPosX() && player.getPosX() + 155 <= piccoloAttack.getPosX() + 30){
+            if(piccoloAttack.getPosY() >= player.getPosY() && piccoloAttack.getPosY() <= player.getPosY() + 60){
+                player.hit();
+                piccoloAttack.delete();
+                barraStats.loseLife();
+            }
         }
     }
 
