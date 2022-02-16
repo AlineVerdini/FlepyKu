@@ -28,27 +28,16 @@ public class Piccolo {
         }
 
 
-    public void moveDown(){
-                posY+=2;
-                piccolo.translate(0,2);
+    public void moveDown() {
+        posY += 2;
+        piccolo.translate(0, 2);
 
-        try {
-                Thread.sleep(10);
-            }
-        catch (InterruptedException e) {
-                System.out.println("deu merda");
-            }
     }
 
     public void moveUp(){
             posY -= 2;
             piccolo.translate(0, -2);
-        try {
-            Thread.sleep(10);
-        }
-        catch (InterruptedException e) {
-            System.out.println("deu merda");
-        }
+
     }
 
     public void move(){

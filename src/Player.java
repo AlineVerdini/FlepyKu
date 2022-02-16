@@ -29,13 +29,6 @@ public class Player {
                 posY+=2;
                 goku.translate(0,2);
             }
-            try {
-                Thread.sleep(10);
-            }
-            catch (InterruptedException e) {
-                System.out.println("deu merda");
-            }
-
         }
 
         public void jump(){

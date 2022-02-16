@@ -7,6 +7,7 @@ public class Game {
     private Piccolo piccolo;
     private PiccoloAttack piccoloAttack;
     private BarraStats barraStats;
+    private SoundTest music;
 
     //constructor
 
@@ -23,12 +24,16 @@ public class Game {
         piccoloAttack = new PiccoloAttack(background);
         piccoloAttack.show();
         barraStats = new BarraStats(player,background);
+        music = new SoundTest();
     }
 
-    public void start(){
+    public void start() throws InterruptedException {
+
         this.init();
+        music.playMusic();
         isStarted = true;
         while (isStarted == true) {
+            Thread.sleep(20);
             player.falling();
             piccolo.move();
             piccoloAttack.moveLeft();
@@ -50,5 +55,3 @@ public class Game {
         isStarted = false;
     }
 }
-
-

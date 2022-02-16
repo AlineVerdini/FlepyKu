@@ -34,23 +34,13 @@ public class PiccoloAttack {
         posY+=2;
         piccoloAttack.translate(0,2);
 
-        try {
-            Thread.sleep(10);
-        }
-        catch (InterruptedException e) {
-            System.out.println("deu merda");
-        }
+
     }
 
     public void moveLeft(){
         posX -= 5;
         piccoloAttack.translate(-5, 0);
-        try {
-            Thread.sleep(10);
-        }
-        catch (InterruptedException e) {
-            System.out.println("deu merda");
-        }
+
     }
 
     public int getPosX() {
