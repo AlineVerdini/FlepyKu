@@ -18,7 +18,7 @@
     </target>
 
     <target name="compile" description="Compiles the source code" depends="prepare">
-        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" source="1.8" target="1.8">
             <classpath refid="classpath"/>
         </javac>
     </target>
